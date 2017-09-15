@@ -13,11 +13,13 @@
 
 Route::get('/', function () {
 
-    $data = DB::table('opt_users')->get();
+    dump(app('elastic'));exit;
 
-    $client = Elasticsearch\ClientBuilder::create()
-        ->setHosts(['192.168.1.233'])
-        ->build();
+//    $data = DB::table('opt_users')->get();
+//
+//    $client = Elasticsearch\ClientBuilder::create()
+//        ->setHosts(['192.168.1.233'])
+//        ->build();
 
 //    $params = [
 //        'index' => 'my_index',
