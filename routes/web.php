@@ -101,3 +101,5 @@ Route::get('/', function () {
 
     return view('test');
 });
+
+Route::get('test', ['as' => 'test.index', 'uses' => 'TestController@index']);
