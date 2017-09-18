@@ -2,7 +2,9 @@
 
 namespace App\Console\Commands;
 
+use App\User;
 use Illuminate\Console\Command;
+use App\Utils\ElasticSearch\Indexer;
 
 class ElasticIndex extends Command
 {
@@ -38,9 +40,8 @@ class ElasticIndex extends Command
     public function handle()
     {
         //
-
-        app('elastic')->index();
-
-        echo "test";
+        $user = User::all();
+        $indexer = new Indexer($user, User::class);
+        $indexer->index();
     }
 }
