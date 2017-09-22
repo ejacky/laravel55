@@ -13,6 +13,9 @@
 
 Route::get('/', function () {
 
+    return view('welcome');
+    exit;
+
     dump(app('elastic'));exit;
 
 //    $data = DB::table('opt_users')->get();
@@ -103,3 +106,6 @@ Route::get('/', function () {
 });
 
 Route::get('test', ['as' => 'test.index', 'uses' => 'TestController@index']);
+
+Route::post('store', ['as' => 'test.store', 'uses' => 'TestController@store']);
+

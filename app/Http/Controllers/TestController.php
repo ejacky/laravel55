@@ -18,4 +18,9 @@ class TestController extends Controller
         return view('welcome');
     }
 
+    public function store(Request $request)
+    {
+        dump($request->get('username'));
+    }
+
 }
