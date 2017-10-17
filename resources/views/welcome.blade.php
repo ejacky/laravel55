@@ -7,7 +7,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-    {!! app('seotools')->generate() !!}
+        {{--{!! app('seotools')->generate() !!}--}}
 
 
         <!-- Fonts -->
@@ -93,12 +93,12 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    <form method="POST" action="{{route('test.store')}}">
-                        用户：<input type="text" name="username" />
-                        <input type="submit" />
-                    </form>
-                </div>
+                {{--<div class="title m-b-md">--}}
+                    {{--<form method="POST" action="{{route('test.store')}}">--}}
+                        {{--用户：<input type="text" name="username" />--}}
+                        {{--<input type="submit" />--}}
+                    {{--</form>--}}
+                {{--</div>--}}
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Documentation</a>
