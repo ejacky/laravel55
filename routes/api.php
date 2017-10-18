@@ -18,3 +18,12 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('search', ['as' => 'test.search', 'uses' => 'Api\TestApiController@search']);
+
+Route::get('getconf.json', function () {
+    return response()->json(['aa' => 'test']);
+});
+
+Route::get('psql_user', function () {
+    $users = DB::table('users')->get();
+    return response()->json($users);
+});
