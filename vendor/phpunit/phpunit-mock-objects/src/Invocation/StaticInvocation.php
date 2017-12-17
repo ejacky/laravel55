@@ -136,7 +136,7 @@ class StaticInvocation implements Invocation, SelfDescribing
     public function generateReturnValue()
     {
         if ($this->isReturnTypeNullable) {
-            return null;
+            return;
         }
 
         switch (\strtolower($this->returnType)) {
@@ -229,7 +229,7 @@ class StaticInvocation implements Invocation, SelfDescribing
             }
         }
 
-        if ($cloneable === null && \method_exists($object, 'isCloneable')) {
+        if ($cloneable === null) {
             $cloneable = $object->isCloneable();
         }
 
